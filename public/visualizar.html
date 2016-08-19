@@ -13,7 +13,7 @@
 		var socket = io();
 		socket.on("stream", function(image){
 			$("#play").src = image;
-			$("#log").text(image);
+			$("#logger").text(image);
 		});
 	</script>
 </body>
