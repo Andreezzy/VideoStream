@@ -7,12 +7,13 @@
 	<script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
-	<img src="play">
+	<img id="play">
 	<div id="logger"></div>
 	<script>
 		var socket = io();
 		socket.on("stream", function(image){
-			$("#play").src = image;
+			var img = document.getElementById("play");
+			img.src = image;
 			$("#logger").text(image);
 		});
 	</script>
