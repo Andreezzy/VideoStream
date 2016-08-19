@@ -14,7 +14,7 @@ app.get('/', function(req,res){
 	res.redirect('index.html');
 });
 
-io.on('connection', function(){
+io.on('connection', function(socket){
 	socket.on('stream', function(image){
 		socket.broadcast.emit('stream', image);
 	});
