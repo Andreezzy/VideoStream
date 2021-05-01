@@ -1,0 +1,32 @@
+<audio controls id="audio2" 
+       preload="auto" 
+       src="https://coachtestprep.s3-us-west-2.amazonaws.com/uploads/sites/25980/audio-file/f555e07d-fd19-40eb-9fae-eecfdb5cdaf8/activityVoicedConsonant.mp3?X-Amz-Expires=3600&X-Amz-Date=20210501T204758Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAS4DOQ376LOGFEVUO/20210501/us-west-2/s3/aws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=dc827c067211b55423f80f67b2365bd6793670f28bfd218cf36a1ad982257027" >
+    <p>Your browser does not support the audio element</p>
+</audio>
+<p id="text1">played/placed</p>
+<p id="text2">off/of</p>
+<p id="text3">author/father</p>
+<p id="text4">mission/vision</p>
+<p id="text5">bath/path</p>
+<p id="text6">rich/ridge</p>
+<p id="text7">business/buscuit</p>
+<p id="text8">anger/anchor</p>
+
+<script>
+    const audio = myAudio=document.getElementById('audio2');
+    function playSoundAt(second){
+        return function(){
+            audio.currentTime = second;
+            audio.play();
+        }
+    }
+    document.getElementById("text1").addEventListener("click", playSoundAt(0));
+    document.getElementById("text2").addEventListener("click", playSoundAt(22));
+    document.getElementById("text3").addEventListener("click", playSoundAt(44));
+    document.getElementById("text4").addEventListener("click", playSoundAt(67));
+    document.getElementById("text5").addEventListener("click", playSoundAt(88));
+    document.getElementById("text6").addEventListener("click", playSoundAt(109));
+    document.getElementById("text7").addEventListener("click", playSoundAt(128));
+    document.getElementById("text8").addEventListener("click", playSoundAt(151));
+    
+</script>
